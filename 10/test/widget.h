@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -17,15 +18,16 @@ public:
 
     void paintEvent(QPaintEvent *);
 
-
-    int step;
-
 private slots:
-    void on_pushButton_clicked();
-
-    void on_pushButton_2_clicked();
+    void addslot();
+    void decslot();
 
 private:
     Ui::Widget *ui;
+
+    int step;
+
+    QPushButton *bt1;
+    QPushButton *bt2;
 };
 #endif // WIDGET_H
